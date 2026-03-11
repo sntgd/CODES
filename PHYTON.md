@@ -1,5 +1,6 @@
 # CODES
 Python Process
+# Nivel 1 - Funciones sin parámetros ni retorno
 import random
 
 def edad():
@@ -50,7 +51,7 @@ v = contador_vocales()
 print("Número de vocales:", v)
 
 -------------------------------
-
+# Nivel 2 - Funciones con parámetros, pero sin retorno
 def palindromo(palabra):
     palabra = palabra.lower()  
     if palabra == palabra[::-1]:
@@ -79,7 +80,7 @@ calcular_potencia(2, 3)
 calcular_media([10, 20, 30, 40]) 
 
 -------------------------------------
-
+# Nivel 3 - Funciones con parámetros y retorno
 import math
 
 def invertir_cadena(cadena):
@@ -111,7 +112,7 @@ print(calcular_area(3, 5))
 print(buscar_palabra("Me gusta programar en Python", "Python"))
 
 -----------------------------------------------------------------
-
+# Nivel 4 - Funciones con múltiples parámetros y retorno
 def promedio(*numeros):
     return sum(numeros) / len(numeros)
 
@@ -153,3 +154,107 @@ print(calcular_mediana(1, 3, 5, 7))
 print(contar_ocurrencias("hola hola mundo hola", "hola"))
 
 ------------------------------------------------------------
+# Taller de Atributos y Metodos 
+# GATO
+class Animal:
+    def __init__(self, nombre, especie, edad, color):
+        self.nombre = nombre
+        self.especie = especie
+        self.edad = edad
+        self.color = color
+
+    def hacer_sonido(self):
+        print(self.nombre, "está haciendo un sonido.")
+
+    def mostrar_info(self):
+        print(self.nombre, self.especie, self.edad, self.color)
+
+
+gato = Animal("Michi", "Felino", 2, "Negro")
+
+gato.hacer_sonido()
+gato.mostrar_info()
+# VEHICULOS
+
+class Vehiculo:
+    def __init__(self, marca, modelo, color, velocidad):
+        self.marca = marca
+        self.modelo = modelo
+        self.color = color
+        self.velocidad = velocidad
+
+    def acelerar(self):
+        print("La moto está acelerando")
+
+    def frenar(self):
+        print("La moto está frenando")
+
+
+moto = Vehiculo("Yamaha", "R15", "Azul", 180)
+
+moto.acelerar()
+moto.frenar()
+
+-----------------------------------------
+
+carro = Vehiculo("Toyota", "Corolla", "Rojo", 200)
+
+carro.acelerar()
+carro.frenar()
+
+----------------------------------------------------
+# COMIDA
+class Comida:
+    def __init__(self, nombre, pais, calorias, precio):
+        self.nombre = nombre
+        self.pais = pais
+        self.calorias = calorias
+        self.precio = precio
+
+    def servir(self):
+        print("Sirviendo", self.nombre)
+
+    def mostrar_precio(self):
+        print("Precio:", self.precio)
+
+
+bandeja_paisa = Comida("Bandeja Paisa", "Colombia", 1200, 25000)
+
+-----------------------------------------------------------------
+
+# ARBOL 
+class Arbol:
+    def __init__(self, tipo, altura, edad, color):
+        self.tipo = tipo
+        self.altura = altura
+        self.edad = edad
+        self.color = color
+
+    def crecer(self):
+        print("El árbol está creciendo")
+
+    def dar_sombra(self):
+        print("El árbol da sombra")
+
+
+pino = Arbol("Pino", 10, 5, "Verde")
+
+------------------------------------------------------
+
+# LIBRO
+class Libro:
+    def __init__(self, titulo, autor, paginas, genero):
+        self.titulo = titulo
+        self.autor = autor
+        self.paginas = paginas
+        self.genero = genero
+
+    def leer(self):
+        print("Leyendo", self.titulo)
+
+    def informacion(self):
+        print(self.titulo, self.autor)
+
+
+novela = Libro("Cien años de soledad", "Gabriel Garcia Marquez", 400, "Novela")
+
