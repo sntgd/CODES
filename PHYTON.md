@@ -394,3 +394,36 @@ print("Módulo:", calc.modulo(10, 3))
 print("Potencia:", calc.potencia(2, 3))
 print("Raíz cuadrada:", calc.raiz_cuadrada(25))
 
+----------------------------------------------------------------
+
+# Taller Constructores y Modualidad
+
+class Personaje:
+
+    def __init__(self, nombre):
+        self.nombre = nombre
+        self.nivel = 1
+        self.energia = 100
+
+    def atacar(self):
+        self.energia = self.energia - 10
+        print(self.nombre, "atacó. Energía restante:", self.energia)
+
+    def descansar(self):
+        self.energia = 100
+        print(self.nombre, "descansó y recuperó su energía.")
+
+    def mostrar_estado(self):
+        print("Nombre:", self.nombre)
+        print("Nivel:", self.nivel)
+        print("Energía:", self.energia)
+
+    def subir_nivel(self):
+        self.nivel = self.nivel + 1
+        print(self.nombre, "subió al nivel", self.nivel)
+       
+personaje1 = Personaje("Carlos")
+
+personaje1.mostrar_estado()
+personaje1.atacar()
+personaje1.descansar()
