@@ -255,6 +255,145 @@ class Libro:
     def informacion(self):
         print(self.titulo, self.autor)
 
+---------------------------------------------------------
+
+# PELICULA
+class Pelicula:
+    def __init__(self, nombre, genero, duracion, año):
+        self.nombre = nombre
+        self.genero = genero
+        self.duracion = duracion
+        self.año = año
+
+    def reproducir(self):
+        print("Reproduciendo", self.nombre)
+
+    def pausar(self):
+        print("Película pausada")
+
+
+monstersinc = Pelicula("Monsters Inc", "Animación", 92, 2001)
+
+---------------------------------------------------------------
+
+# DISPOSITIVO 
+
+class Dispositivo:
+    def __init__(self, marca, modelo, ram, almacenamiento):
+        self.marca = marca
+        self.modelo = modelo
+        self.ram = ram
+        self.almacenamiento = almacenamiento
+
+    def encender(self):
+        print("Dispositivo encendido")
+
+    def apagar(self):
+        print("Dispositivo apagado")
+
+
+portatil = Dispositivo("HP", "Pavilion", "16GB", "512GB")
+
+--------------------------------------------------------------
+
+# SERVICIO 
+
+class Servicio:
+    def __init__(self, nombre, empresa, costo, tipo):
+        self.nombre = nombre
+        self.empresa = empresa
+        self.costo = costo
+        self.tipo = tipo
+
+    def pagar(self):
+        print("Pagando servicio de", self.nombre)
+
+    def mostrar_empresa(self):
+        print("Empresa:", self.empresa)
+
+
+energia = Servicio("Energía", "EPM", 80000, "Público")
+
+-----------------------------------------------------------
+
+# EMPAQUE 
+
+class Empaque:
+    def __init__(self, material, tamaño, color, peso):
+        self.material = material
+        self.tamaño = tamaño
+        self.color = color
+        self.peso = peso
+
+    def abrir(self):
+        print("La caja se abrió")
+
+    def cerrar(self):
+        print("La caja se cerró")
+
+
+caja = Empaque("Cartón", "Grande", "Marrón", "2kg"
+
+-----------------------------------------------------------
+
+# PERSONA 
+
+class Persona:
+    def __init__(self, nombre, edad, ciudad, ocupacion):
+        self.nombre = nombre
+        self.edad = edad
+        self.ciudad = ciudad
+        self.ocupacion = ocupacion
+
+    def saludar(self):
+        print("Hola, soy", self.nombre)
+
+    def estudiar(self):
+        print(self.nombre, "está estudiando")
+
+
+estudiante = Persona("Carlos", 20, "Bogotá", "Estudiante")
 
 novela = Libro("Cien años de soledad", "Gabriel Garcia Marquez", 400, "Novela")
+
+-----------------------------------------------------------------------------------
+# TALLER PARA LA CASA ( CALCULADORA )
+
+import math
+
+class Calculadora:
+
+    def suma(self, a, b):
+        return a + b
+
+    def resta(self, a, b):
+        return a - b
+
+    def multiplicacion(self, a, b):
+        return a * b
+
+    def division_entera(self, a, b):
+        return a // b
+
+    def modulo(self, a, b):
+        return a % b
+
+    def potencia(self, a, b):
+        return a ** b
+
+    def raiz_cuadrada(self, a):
+        return math.sqrt(a)
+
+
+# Crear objeto
+calc = Calculadora()
+
+# Pruebas
+print("Suma:", calc.suma(10, 5))
+print("Resta:", calc.resta(10, 5))
+print("Multiplicación:", calc.multiplicacion(10, 5))
+print("División entera:", calc.division_entera(10, 5))
+print("Módulo:", calc.modulo(10, 3))
+print("Potencia:", calc.potencia(2, 3))
+print("Raíz cuadrada:", calc.raiz_cuadrada(25))
 
