@@ -385,10 +385,8 @@ class Calculadora:
         return math.sqrt(a)
 
 
-# Crear objeto
 calc = Calculadora()
 
-# Pruebas
 print("Suma:", calc.suma(10, 5))
 print("Resta:", calc.resta(10, 5))
 print("Multiplicación:", calc.multiplicacion(10, 5))
