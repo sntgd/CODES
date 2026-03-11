@@ -427,3 +427,7 @@ personaje1 = Personaje("Carlos")
 personaje1.mostrar_estado()
 personaje1.atacar()
 personaje1.descansar()
+personaje1.subir_nivel()
+personaje1.mostrar_estado()
+
+
