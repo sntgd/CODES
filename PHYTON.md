@@ -41,8 +41,6 @@ def contador_vocales():
 
     return contador
 
-
-
 edad()
 suma()
 num_aleatorio()
@@ -52,6 +50,7 @@ print("Número de vocales:", v)
 
 -------------------------------
 # Nivel 2 - Funciones con parámetros, pero sin retorno
+
 def palindromo(palabra):
     palabra = palabra.lower()  
     if palabra == palabra[::-1]:
