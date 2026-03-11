@@ -41,7 +41,7 @@ def contador_vocales():
     return contador
 
 
-# Ejemplo de uso
+
 edad()
 suma()
 num_aleatorio()
