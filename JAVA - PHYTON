@@ -114,14 +114,14 @@ public class menu {
             switch (opcion) {
 
                 case 1:
-                    sc.nextLine(); // limpiar buffer
+                    sc.nextLine(); 
 
                     System.out.print("Ingrese nombre: ");
                     nombre = sc.nextLine();
 
                     System.out.print("Ingrese edad: ");
                     edad = sc.nextInt();
-                    sc.nextLine(); // limpiar buffer
+                    sc.nextLine(); 
 
                     System.out.print("Ingrese programa: ");
                     programa = sc.nextLine();
