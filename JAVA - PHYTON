@@ -1,3 +1,5 @@
+# CODIGO DIA 1
+
 # PHYTON 
 
 nombre = "Santiago Diaz"
@@ -24,4 +26,122 @@ public class informacionpersonal {
      System.out.println("Edad: " + edad);
      System.out.println("Programa: " + programa);
  }
+}
+
+# CODIGO DIA 2
+
+# PHYTON
+
+def mostrarMenu():
+    while True:
+        print("\n===== MENÚ =====")
+        print("1. Ingresar datos")
+        print("2. Mostrar datos")
+        print("3. Salir")
+
+        try:
+            opcion = int(input("Seleccione una opción: "))
+            return opcion
+        except:
+            print("Caracter no valido")
+
+
+nombre = ""
+edad = 0
+programa = ""
+
+while True:
+    opcion = mostrarMenu()
+
+    if opcion == 1:
+        nombre = input("Ingrese nombre: ")
+
+        while True:
+            try:
+                edad = int(input("Ingrese edad: "))
+                break
+            except:
+                print("Caracter no valido")
+
+        programa = input("Ingrese programa: ")
+
+    elif opcion == 2:
+        print("\n--- DATOS ---")
+        print("Nombre:", nombre)
+        print("Edad:", edad)
+        print("Programa:", programa)
+
+    elif opcion == 3:
+        print("Saliendo...")
+        break
+
+    else:
+        print("Opción inválida")
+
+
+# JAVA
+
+package Paquete;
+
+import java.util.Scanner;
+
+public class menu {
+
+    public static Scanner sc = new Scanner(System.in);
+
+    public static int mostrarMenu() {
+        System.out.println("\n===== MENÚ =====");
+        System.out.println("1. Ingresar datos");
+        System.out.println("2. Mostrar datos");
+        System.out.println("3. Salir");
+        System.out.print("Seleccione una opción: ");
+
+        int opcion = sc.nextInt();
+        return opcion;
+    }
+
+    public static void main(String[] args) {
+
+        String nombre = "";
+        int edad = 0;
+        String programa = "";
+
+        int opcion;
+
+        do {
+            opcion = mostrarMenu();
+
+            switch (opcion) {
+
+                case 1:
+                    sc.nextLine(); // limpiar buffer
+
+                    System.out.print("Ingrese nombre: ");
+                    nombre = sc.nextLine();
+
+                    System.out.print("Ingrese edad: ");
+                    edad = sc.nextInt();
+                    sc.nextLine(); // limpiar buffer
+
+                    System.out.print("Ingrese programa: ");
+                    programa = sc.nextLine();
+                    break;
+
+                case 2:
+                    System.out.println("\n--- DATOS ---");
+                    System.out.println("Nombre: " + nombre);
+                    System.out.println("Edad: " + edad);
+                    System.out.println("Programa: " + programa);
+                    break;
+
+                case 3:
+                    System.out.println("Saliendo...");
+                    break;
+
+                default:
+                    System.out.println("Opción inválida");
+            }
+
+        } while (opcion != 3);
+    }
 }
