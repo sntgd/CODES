@@ -1,1 +1,27 @@
+# PHYTON 
 
+nombre = "Santiago Diaz"
+edad = 18
+programa = "Ingenieria Biomedica"
+
+print("Nombre:", nombre)
+print("Edad:", edad)
+print("Programa:", programa)
+
+#JAVA
+
+package Pack;
+
+public class informacionpersonal {
+
+ public static void main(String[] args) {
+
+     String nombre = "Santiago Diaz";
+     int edad = 18;
+     String programa = "Ingenieria Biomedica";
+
+     System.out.println("Nombre: " + nombre);
+     System.out.println("Edad: " + edad);
+     System.out.println("Programa: " + programa);
+ }
+}
